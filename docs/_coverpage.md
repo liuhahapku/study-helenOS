@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](/pic/logo.png)
+![logo](https://avatars.githubusercontent.com/u/2614424?s=200&v=4)
 
 # Source Analysis: HelenOS 0.2.0 + AMD64 arch
 
