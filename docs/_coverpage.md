@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](http://www.helenos.org/chrome/site/helenos_banner.gif)
+![logo](/pic/logo.png)
 
 # Source Analysis: HelenOS 0.2.0 + AMD64 arch
 
