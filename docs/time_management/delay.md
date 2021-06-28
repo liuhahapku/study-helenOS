@@ -47,6 +47,6 @@ asm_delay_loop:
 
 这个函数只有两条汇编语句，它的功能是将这两条汇编语句循环 n 次，n 就是函数的参数。```rdi```寄存器存放函数的第一个参数（即循环次数，当然是一个正整数），0处的代码```dec %rdi```表示对寄存器减一，```jnz 0b```表示如果上一条指令运算的结果不为0，那么跳转到0处。
 
-函数```delay```中的```asm_delay_loop```的参数是```usec * CPU->delay_loop_const```,即微秒数乘以 CPU 每微秒循环的次数。
+函数```delay```中的```asm_delay_loop```的参数是```usec * CPU->delay_loop_const```，即微秒数乘以 CPU 每微秒循环的次数。
 
-在```amd64```中，```CPU->delay_loop_const```的大小是由8254定时芯片控制的。具体请参考 [8254 芯片](i8254)模块。
+在```amd64```架构下，```CPU->delay_loop_const```的大小是由8254定时芯片控制的。具体请参考 [8254 芯片](/time_management/i8254.md)模块。
