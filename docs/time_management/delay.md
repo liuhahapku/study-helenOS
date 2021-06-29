@@ -33,7 +33,7 @@ void delay(__u32 usec)
 	interrupts_restore(ipl);
 }
 ```
-函数体中的```asm_delay_loop```函数使用汇编代码控制 CPU 进行空转的循环，以此来实现延迟。在进入这个汇编函数之前，需要关闭中断，在离开这个汇编函数之后，需要重置中断。关闭和打开中断也会花费时间，也许这就是前面提到的比实际延迟多一点的来源。中断的关闭与打开实现方式与具体的架构有关，请参考 [arch/interrupt](/arch_related/interrupt.md) 模块源码分析。
+函数体中的```asm_delay_loop```函数使用汇编代码控制 CPU 进行空转的循环，以此来实现延迟。在进入这个汇编函数之前，需要关闭中断，在离开这个汇编函数之后，需要重置中断。关闭和打开中断也会花费时间，也许这就是前面提到的比实际延迟多一点的来源。中断的关闭与打开实现方式与具体的架构有关，请参考[异常与中断](/exception_and_interrupt/exception_and_interrupt.md)模块源码分析。
 
 
 汇编函数```asm_delay_loop```定义在架构相关代码中，以 ```amd64``` 为例，函数定义在```arch/amd64/src/delay.S``` 中。函数体如下
@@ -49,4 +49,4 @@ asm_delay_loop:
 
 函数```delay```中的```asm_delay_loop```的参数是```usec * CPU->delay_loop_const```，即微秒数乘以 CPU 每微秒循环的次数。
 
-在```amd64```架构下，```CPU->delay_loop_const```的大小是由8254定时芯片控制的。具体请参考 [8254 芯片](/time_management/i8254.md)模块。
+在```amd64```架构下，```CPU->delay_loop_const```的值是在 8254 定时芯片的帮助下确定的。具体请参考 [8254 芯片](/time_management/8254_chip.md) 模块。

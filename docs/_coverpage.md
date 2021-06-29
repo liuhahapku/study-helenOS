@@ -2,7 +2,7 @@
 
 ![logo](https://avatars.githubusercontent.com/u/2614424?s=200&v=4)
 
-# Source Analysis: HelenOS 0.2.0 + AMD64 arch
+# **Source analysis: HelenOS 0.2.0 aimed at Amd64 architecture**
 
 
 [GitHub](https://github.com/liuhahapku/study-helenOS/)
