@@ -13,6 +13,10 @@ HelenOS 0.2.0 版本发布于 2006 年。作为一个实验性和研究性的操
 
 实际上，HelenOS 支持多种架构。理论上来说，选择任何一种都可以。因为 OS 所需的硬件的支持是类似的。但 amd64 是不错的研究对象，因为这个架构使用最为广泛，相关资料丰富，能给我们带来不少便利。
 
+## HelenOS 0.2.0 版针对 amd64 裁剪过的源码
+
+源码下载地址：https://github.com/liuhahapku/helenos0.2.0amd64_reading
+
 ## 模块列表
 
 + [时间管理 (Time Management)](/time_management/time_management.md)
